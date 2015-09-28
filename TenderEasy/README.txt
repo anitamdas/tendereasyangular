@@ -14,3 +14,4 @@ configured to load the other pages dynamically inside the index.html.
 
 For searching the route I have implemented Depth First Search with some mock up data. After searching all the routes I
 can sort them by distance or cost. The shortest path contains the sum of the pathcost and distance cost of all it's child routes.
+s

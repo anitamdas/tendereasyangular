@@ -1,0 +1,158 @@
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.global-margin {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 30px;
+}
+
+.language-bar {
+    text-align: -webkit-right;
+}
+
+.navigation-bar-back {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.navigation-bar {
+    box-shadow: 10px 5px 5px #888888;
+    background-color: #5ba0d0;
+    height: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.url-placeholder {
+    
+    text-align: -webkit-right;
+    margin-right: 10%;
+    text-anchor: center;
+    padding-top: 10px;
+}
+
+.url-link {
+    padding-left: 30px;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.url-link:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.text-simple {
+    font-family: initial;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(24, 127, 168);
+}
+
+
+.scribble-map{
+    float: none;
+    margin: auto;
+    width: 90%;
+    height: 400px;
+}
+
+.result-table-header {
+    width: 90%;
+    margin: auto;
+    border-width: 8px;
+    border-color: #314550;
+    border-style: solid;
+    /*font-weight: bold;*/
+    background-color: #FFFFFF;
+    color: #4B6A7B;
+    font-size: large;
+    text-transform: uppercase;
+    font-family: Verdana;
+
+}
+.result-table-cell {
+    padding-top: 10px;
+    width: 80%;
+    margin: auto;
+    background-color: #FFFFFF;
+    color: #4B6A7B;
+    text-transform: uppercase;
+    font-family: Verdana;
+    border-bottom: #76A6C2;
+    border-bottom-style: dashed;
+    margin-bottom: 10px;
+}
+
+.result-table-holder{
+
+
+}
+
+
+
+
+
+
+/*Twitter Typeahead (Autocomplete for Source and Destination input) - Start*/
+.twitter-typeahead{
+    width:100%;
+}
+
+.twitter-typeahead .tt-query,
+.twitter-typeahead .tt-hint {
+    margin-bottom: 0;
+}
+.tt-dropdown-menu {
+    min-width: 160px;
+    margin-top: 2px;
+    padding: 5px 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.2);
+    *border-right-width: 2px;
+    *border-bottom-width: 2px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    width:100%;
+}
+
+.tt-suggestion {
+    display: block;
+    padding: 3px 20px;
+}
+
+.tt-suggestion.tt-is-under-cursor {
+    color: #fff;
+    background-color: #0081c2;
+    background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
+    background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
+    background-image: -o-linear-gradient(top, #0088cc, #0077b3);
+    background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0)
+}
+
+.tt-suggestion.tt-is-under-cursor a {
+    color: #fff;
+}
+
+.tt-suggestion p {
+    margin: 0;
+}
+/*Twitter Typeahead (Autocomplete for Source and Destination input) - End*/
+
+

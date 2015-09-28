@@ -1,0 +1,126 @@
+<div>
+    <p class="text-simple" >Logged as :{{userobject.name}}@Tendereasy.com ab Sweden-{{userobject.post}}</p>
+</div>
+<div>
+    <img src="../Content/Images/transport_demoimage.png" >
+</div>
+<div class="col-lg-12" style="padding-top: 30px;">
+    <div class="col-lg-3">
+        <button type="button" class="btn btn-primary">DASHBOARD</button>
+    </div>
+    <div class="col-lg-3">
+        <button type="button" class="btn btn-default">Freight Search</button>
+    </div>
+    <div class="col-lg-3">
+        <button type="button" class="btn btn-primary">Spot Requests</button>
+    </div>
+    <div class="col-lg-3">
+        <button type="button" class="btn btn-primary">Bookings</button>
+    </div>
+</div>
+<div class="col-lg-12" style="padding-top: 50px;">
+    <form id="searchForm">
+        <div class="col-lg-8">
+            <div class="col-lg-6">
+                <div class="col-lg-3" style="font-size: large;color: #428bca;">
+                    From
+                </div>
+                <div class="col-lg-9">
+                    <div class="form-group form-inline">
+                        <input class="form-control autocom" value="Dhaka" name="source"  placeholder="Choose Source.." type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="col-lg-3" style="font-size: large;color: #428bca;">
+                    To
+                </div>
+                <div class="col-lg-9">
+                    <div class="form-group form-inline">
+                        <input class="form-control autocom" value="Chittagong" name="dest" placeholder="Choose Destination.." type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="col-lg-3" style="font-size: large;color: #428bca;">
+                    Unit
+                </div>
+                <div class="col-lg-9">
+                    <div class="form-group">
+                        <select name="unit" class="form-control" >
+                            <option>20" Container</option>
+                            <option>40" Container</option>
+                            <option>60" Container</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="col-lg-3" style="font-size: large;color: #428bca;">
+                    Terms
+                </div>
+                <div class="col-lg-9">
+                    <div class="form-group">
+                        <select name="terms" class="form-control" >
+                            <option>OIC</option>
+                            <option>NOB</option>
+                            <option>ABC</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <a ng-click="performSearch();" href="#"><img style="padding-top: 30px;" src="../Content/Images/searchbutton.png"></a>
+        </div>
+    </form>
+</div>
+<div class="col-lg-12" style="font-size: 30px;text-align: -webkit-center;padding-top: 20px;font-family: fantasy;" id="NoResultsFound">
+    No Results Found
+</div>
+<div id="mapHolder">
+    <div class="col-lg-12" style="padding-top: 40px; text-align: center;">
+        <img src="../Content/Images/yourmapsearchresults.png">
+    </div>
+    <div class="col-lg-12" style="padding-top: 20px;">
+        <div class="scribble-map" id="ScribbleMap" ></div>
+    </div>
+</div>
+<div id="tableHolder">
+    <div class="col-lg-12" style="padding-top: 40px; text-align: center;">
+        <img src="../Content/Images/yourtabularresults.png">
+    </div>
+    <div ng-repeat="eachroute in RouteResults" class="col-lg-12" style="padding-top: 20px;">
+        <div ng-click="plotspecificRoute(eachroute.pathID)" class="col-lg-12-offset-1 result-table-header">
+            <p style="padding-left: 10px;padding-top: 5px;">OPTION {{eachroute.pathID}}</p>
+            <p style="padding-left: 10px;padding-top: 5px;" > {{eachroute.pathStr}} From {{eachroute.pathCost}} EUR AND {{eachroute.pathDist}} days </p>
+        </div>
+        <div class="result-table-holder">
+            <div ng-repeat="eachrouteDetail in eachroute.pathDetails" class="col-lg-12-offset-2 result-table-cell">
+                <p > {{eachrouteDetail.dist}} days</p>
+                <p > {{eachrouteDetail.source}} - {{eachrouteDetail.dest}} </p>
+                <p > Neutralized o Co2 emissions</p>
+                <p style="text-align: right;" > &euro;{{eachrouteDetail.cost}}</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="../Content/angular/twitter-typeahead.js" ></script>
+<script>
+
+//    $('#mapHolder').css('display','none');
+    var allocations = [];
+    for (var i=0; i<locationList.length; i++)
+    {
+        allocations.push(locationList[i].name);
+    }
+    $('.autocom').typeahead({
+        local: allocations
+    });
+    $('.tt-query').css('background-color','#fff');
+
+</script>

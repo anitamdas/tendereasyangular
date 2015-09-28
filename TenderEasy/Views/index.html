@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="tendereasy">
+<head lang="en" >
+    <meta charset="UTF-8">
+    <title>Tender Easy</title>
+    <link rel="stylesheet" type="text/css" href="../Content/Bootstrap/css/bootstrap.css" >
+    <link rel="stylesheet" type="text/css" href="../Content/CustomCSS.css" >
+    <script type="text/javascript" src="../Content/jQuery/jquery-2.1.4.min.js" ></script>
+    <script type="text/javascript" src="../Content/angular/angular.min.js" ></script>
+    <script type="text/javascript" src="../Content/angular/angular-ui-router.js" ></script>
+    <script type="text/javascript" src="../Content/angular/usermanager.js" ></script>
+    <script type="text/javascript" src="../Content/angular/pathmanager.js" ></script>
+    <script type="text/javascript" src="../Content/angular/locationmanager.js" ></script>
+    <script type="text/javascript" src="//scribblemaps.com/api/js/" ></script>
+    <script type="text/javascript" src="../Content/angular/scribblemanage.js" ></script>
+    <script type="text/javascript" src="../Content/angular/app.js" ></script>
+
+</head>
+<body ng-controller="tenderCentral as tC" ng-init="nirjhar=2">
+
+<div class="row global-margin">
+    <div class="col-lg-6">
+        <img src="../Content/Images/logo.png" >
+    </div>
+    <div class="col-lg-6 language-bar">
+        <div>
+            <img src="../Content/Images/gb.gif" >
+            <img src="../Content/Images/es.gif" >
+            <img src="../Content/Images/se.gif" >
+        </div>
+    </div>
+</div>
+<div class="navigation-bar-back">
+    <div class="navigation-bar">
+        <div class="url-placeholder ">
+            <a ui-sref="login" href="#" class="url-link">Solutions </a>
+            <a ui-sref="mapsearch" href="#" class="url-link">How to optimize </a>
+            <a href="#" class="url-link">References</a>
+            <a href="#" class="url-link">About us</a>
+            <a href="#" class="url-link">Support</a>
+            <a href="#" class="url-link">Sign up</a>
+        </div>
+    </div>
+</div>
+<div style="margin-left: 10%; margin-right: 10%; margin-top:30px;">
+    <div ui-view>
+
+    </div>
+</div>
+
+</body>
+</html>
