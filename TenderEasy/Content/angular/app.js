@@ -14,12 +14,12 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $stateProvider
         .state('login', {
             url: '/login',
-            templateUrl: '../../Views/login.html'
+            templateUrl: '/TenderEasy/Views/login.html'
         })
 
         .state('mapsearch', {
             url: '/mapsearch/',
-            templateUrl: '../../Views/mapsearch.html',
+            templateUrl: '/TenderEasy/Views/mapsearch.html',
             controller : 'MapSearchCTRL',
             params: {user: null}
         })
